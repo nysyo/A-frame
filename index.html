@@ -3,7 +3,7 @@
 <script src="https://aframe.io/releases/1.0.0/aframe.min.js"></script>
 <script src="https://raw.githack.com/jeromeetienne/AR.js/2.2.2/aframe/build/aframe-ar.js"></script>
   <body style='margin : 0px; overflow: hidden;'>
-    <a-scene embedded arjs>
+    <a-scene embedded arjs="debugUIEnabled:false" vr-mode-ui="enabled: false" camera look-controls wasd-controls="enabled:false">
       <a-marker preset="hiro">
       </a-marker>
       <a-entity camera></a-entity>
