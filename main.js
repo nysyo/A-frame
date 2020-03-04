@@ -14,7 +14,7 @@ function draw_circle(x,y,z,r){
     for(var i = 0; i < n; i++){
         var line = document.createElement('a-entity');
         line.setAttribute("id",`line${i}`);
-        line.setAttribute("line", `start: ${x + r*Math.cos(((i-1)/n)*2*Math.PI)} ${y} ${z+r*Math.sin(((i-1)/n)*2*Math.PI)}; end: ${x+r*Math.cos((i/n)*2*Math.PI)} ${y} ${z+r*Math.sin((i/n)*2*Math.PI)}; color: #000000`);
+        line.setAttribute("line", `start: ${x + r*Math.cos(((i-1)/n)*2*Math.PI)} ${y} ${z+r*Math.sin(((i-1)/n)*2*Math.PI)}; end: ${x+r*Math.cos((i/n)*2*Math.PI)} ${y} ${z+r*Math.sin((i/n)*2*Math.PI)}; color: #FF0000`);
         scene.append(line);
     }
 }
@@ -22,7 +22,7 @@ function draw_circle2(x,y,z,r){
     const n = 100;
     for(var i = 0; i < n; i++){
         var line = document.createElement('a-entity');
-        line.setAttribute("line", `start: ${x + r*Math.cos(((i-1)/n)*2*Math.PI)} ${y} ${z+r*Math.sin(((i-1)/n)*2*Math.PI)}; end: ${x+r*Math.cos((i/n)*2*Math.PI)} ${y} ${z+r*Math.sin((i/n)*2*Math.PI)}; color: #000000`);
+        line.setAttribute("line", `start: ${x + r*Math.cos(((i-1)/n)*2*Math.PI)} ${y} ${z+r*Math.sin(((i-1)/n)*2*Math.PI)}; end: ${x+r*Math.cos((i/n)*2*Math.PI)} ${y} ${z+r*Math.sin((i/n)*2*Math.PI)}; color: #FF0000`);
         scene.append(line);
     }
 }
@@ -31,14 +31,14 @@ function move_circle(x,y,z,r){
     const n = 100;
     for(var i = 0; i < n; i++){
         var line = document.getElementById(`line${i}`);
-        line.setAttribute("line", `start: ${x + r*Math.cos(((i-1)/n)*2*Math.PI)} ${y} ${z+r*Math.sin(((i-1)/n)*2*Math.PI)}; end: ${x+r*Math.cos((i/n)*2*Math.PI)} ${y} ${z+r*Math.sin((i/n)*2*Math.PI)}; color: #000000`);
+        line.setAttribute("line", `start: ${x + r*Math.cos(((i-1)/n)*2*Math.PI)} ${y} ${z+r*Math.sin(((i-1)/n)*2*Math.PI)}; end: ${x+r*Math.cos((i/n)*2*Math.PI)} ${y} ${z+r*Math.sin((i/n)*2*Math.PI)}; color: #FF0000`);
     }
 }
 var scene = document.querySelector('a-marker');
 var circle_back = document.createElement("a-circle");
 var circle_front = document.createElement("a-circle");
 var bar = document.createElement('a-entity');
-bar.setAttribute("line", `start:${1-b+defalt.x} ${defalt.y} ${defalt.z}; end: ${1-b+a+defalt.x} ${defalt.y} ${defalt.z}; color: #000000`);
+bar.setAttribute("line", `start:${1-b+defalt.x} ${defalt.y} ${defalt.z}; end: ${1-b+a+defalt.x} ${defalt.y} ${defalt.z}; color: #FF0000`);
 draw_circle2(defalt.x,defalt.y,defalt.z,1);
 draw_circle(1-b+defalt.x,defalt.y,defalt.z,b);
 scene.append(bar);
