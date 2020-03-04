@@ -5,9 +5,9 @@ var z = 0;
 const a = 0.8;
 const b = 0.05;
 const defalt = {
-    x: -1,
-    y: -1,
-    z: -1
+    x: 0,
+    y: 1,
+    z: 0
 };
 function draw_circle(x,y,z,r){
     const n = 100;
