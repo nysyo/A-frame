@@ -34,7 +34,7 @@ function move_circle(x,y,z,r){
         line.setAttribute("line", `start: ${x + r*Math.cos(((i-1)/n)*2*Math.PI)} ${y+r*Math.sin(((i-1)/n)*2*Math.PI)} ${z}; end: ${x+r*Math.cos((i/n)*2*Math.PI)} ${y+r*Math.sin((i/n)*2*Math.PI)} ${z}; color: #000000`);
     }
 }
-var scene = document.querySelector('a-scene');
+var scene = document.querySelector('a-marker');
 var circle_back = document.createElement("a-circle");
 var circle_front = document.createElement("a-circle");
 var bar = document.createElement('a-entity');
